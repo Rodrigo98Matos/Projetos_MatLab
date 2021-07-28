@@ -1,0 +1,27 @@
+function bissecao (f,a,b)
+    function fx = fx(x)
+    fx = f;
+    end
+
+erro=0.001;
+n=200;
+itera = 0;
+f1 = subs(f,a);
+f2 = subs(f,b);
+while(abs(b-a)>erro)
+    itera = itera + 1;
+    if(itera>n)
+        printf("O número máximo de iterações foi excedido!")
+        break
+    end
+    xmedio = (a+b)/2;
+    ymedio = subs(f,xmedio);
+    if(f1*ymedio>0)
+        a = xmedio;
+        f1 = ymedio;
+    else
+        b = xmedio;
+        f2 = ymedio;
+    end
+end
+bissecao(x,0,-5)

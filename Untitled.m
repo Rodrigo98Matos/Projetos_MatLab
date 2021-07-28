@@ -1,6 +1,6 @@
-x = -2*pi:0.001:2*pi;
+x = 1:0.001:100;
 subplot(2,1,1);
-y1 = sin(x);
+y1 = (x^2);
 plot(x,y1);
 legend("Sin X")
 title("Sim X")
@@ -12,3 +12,4 @@ plot(x,y2,'r')
 legend("cos x")
 title("Cos X")
 grid on
+
